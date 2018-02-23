@@ -6,27 +6,34 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { NorthPage } from '../pages/north/north';
+import { AddTechnologyPage} from '../pages/add-technology/add-technology';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    NorthPage
+    NorthPage,
+    AddTechnologyPage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule, //add for show form that we created
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     ListPage,
-    NorthPage 
+    NorthPage,
+    AddTechnologyPage, 
   ],
   providers: [
     StatusBar,
